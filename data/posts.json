@@ -1,0 +1,16 @@
+[
+    {
+        "id":1,
+        "title":"Post One",
+        "post":"Lorem ipsam dolor set amet",
+        "dateCreated":"2022-07-18T09:04:43.775Z",
+        "dateUpdated":"2022-07-18T09:04:43.775Z"
+    },
+    {
+        "id":2,
+        "title":"Post two",
+        "post":"Lorem ipsam dolor set amet bracket lamda pull",
+        "dateCreated":"2022-07-18T09:04:43.775Z",
+        "dateUpdated":"2022-07-18T09:04:43.775Z"
+    }
+]
