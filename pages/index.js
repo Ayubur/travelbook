@@ -3,23 +3,27 @@ import Link from "next/link";
 function Home({ posts }) {
     return (
         <div className="container">
-            <div style={{marginTop:35}}>
-                <div style={{textAlign:'right'}}>
-                    <Link href="/create">
+            <div style={{ marginTop: 35 }}>
+                <div style={{ textAlign: 'right' }}>
+                    <Link href="/post/create">
                         <button className="btn btn-primary">Add New Post</button>
                     </Link>
                 </div>
                 <>
                     {
                         posts?.map(post => (
-                            <div className="row" style={{marginTop:25}} key={post.id}>
-                                <div className="card">
-                                    <div className="card-body">
-                                        <h5 className="card-title">{post?.title}</h5>
-                                        <p className="card-text">{post?.post}</p>
+                            <Link href={`/post/${post?.id}`} key={post.id}>
+                                <a>
+                                    <div className="row" style={{ marginTop: 25 }}>
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <h5 className="card-title">{post?.title}</h5>
+                                                <p className="card-text">{post?.post}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
+                                </a>
+                            </Link>
                         ))
                     }
                 </>

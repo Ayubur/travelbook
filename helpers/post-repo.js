@@ -3,7 +3,7 @@ const fs = require('fs')
 let posts = require('../data/posts.json');
 
 export const postRepo = {
-    getAll: () => posts,
+    getAll: () => posts?.reverse(),
     getById: id => posts.find(x => x.id.toString() === id.toString()),
     find: x => posts.find(x),
     create,
